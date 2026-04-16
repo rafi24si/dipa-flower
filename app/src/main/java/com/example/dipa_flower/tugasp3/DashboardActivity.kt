@@ -17,7 +17,7 @@ class DashboardActivity : AppCompatActivity() {
 
         val username = intent.getStringExtra("USERNAME") ?: "User"
 
-        binding.textView7.text = "Anda Telah Masuk Dashboard\n$username"
+        binding.textView7.text = "Anda Telah Masuk Dashboardd\n$username"
 
         // Logout → balik ke Login
         binding.button.setOnClickListener {
