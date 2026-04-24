@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- ✅ WAJIB untuk WebView -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,22 +15,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dipaflower">
 
-        <!-- LOGIN = HALAMAN PERTAMA -->
+        <!-- 🔥 TUGAS P5 (JADI HALAMAN AWAL) -->
         <activity
-            android:name=".tugasp3.LoginActivity"
+            android:name=".tugasp5.FifthActivity"
             android:exported="true">
 
+            <!-- PINDAHAN DARI LOGIN -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
-        <!-- DASHBOARD (tidak perlu intent-filter) -->
+        <!-- WEBVIEW -->
+        <activity
+            android:name=".tugasp5.WebViewActivity"
+            android:exported="false" />
+
+        <!-- TUGAS P4 -->
+        <activity
+            android:name=".tugasp4.ScreenActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".tugasp4.HalamanActivity"
+            android:exported="false" />
+
+        <!-- LOGIN (SUDAH BUKAN HALAMAN AWAL) -->
+        <activity
+            android:name=".tugasp3.LoginActivity"
+            android:exported="false" />
+
+        <!-- DASHBOARD -->
         <activity android:name=".tugasp3.DashboardActivity" />
 
-        <!-- optional -->
+        <!-- MAIN -->
         <activity android:name=".MainActivity" />
 
     </application>
